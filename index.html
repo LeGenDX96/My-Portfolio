@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#7a1fff" />
+<title>Waseem TechX — Full Stack Developer & Bot Creator</title>
+<meta name="description" content="Waseem TechX — Unstoppable Developer. Building next-gen WhatsApp bots, websites, and tools." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ═══════ LOADER ═══════ -->
+<div class="loader-screen" id="loader">
+  <div class="loader-content">
+    <div class="loader-logo">W</div>
+    <div class="loader-bar"><span></span></div>
+    <p class="loader-text">Loading Experience…</p>
+  </div>
+</div>
+
+<!-- ═══════ CUSTOM CURSOR ═══════ -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-follower" id="cursorFollower"></div>
+
+<!-- ═══════ PROGRESS BAR ═══════ -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ═══════ BACKGROUND ═══════ -->
+<div class="bg-layer">
+  <div class="grid-bg"></div>
+  <canvas id="stars"></canvas>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+</div>
+
+<!-- ═══════ NAVBAR ═══════ -->
+<header class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="#home" class="nav-logo">
+      <span class="logo-symbol">W</span>
+      <span class="logo-text">Waseem<em>TechX</em></span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="nav-right">
+      <a href="https://github.com/LeGenDX96" target="_blank" rel="noopener" class="nav-icon" aria-label="GitHub">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a href="https://wa.me/923447861706" target="_blank" rel="noopener" class="nav-cta">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>Hire Me</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════ HERO ═══════ -->
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        Available for work
+      </div>
+
+      <h1 class="hero-title">
+        <span class="line">Hi, I'm</span>
+        <span class="line gradient">Waseem TechX</span>
+      </h1>
+
+      <div class="hero-role">
+        <span class="role-static">I'm a </span>
+        <span class="role-dynamic" id="roleText"></span>
+        <span class="cursor-blink">|</span>
+      </div>
+
+      <p class="hero-desc">
+        Unstoppable Developer building <strong>next-gen WhatsApp bots</strong>,
+        modern websites, and powerful tools. Turning ideas into
+        <em>reality</em> — one line of code at a time.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn primary">
+          <i class="fa-solid fa-rocket"></i> View Projects
+        </a>
+        <a href="https://wa.me/923447861706" target="_blank" rel="noopener" class="btn ghost">
+          <i class="fa-solid fa-paper-plane"></i> Let's Talk
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num" data-count="50">0</span><span class="stat-plus">+</span>
+          <p>Projects</p>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-count="30">0</span><span class="stat-plus">+</span>
+          <p>Bots Built</p>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-count="3">0</span><span class="stat-plus">+</span>
+          <p>Years Exp</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="hero-card">
+        <div class="card-glow"></div>
+        <div class="hero-avatar">
+          <img src="https://github.com/LeGenDX96.png" alt="Waseem TechX" />
+          <div class="avatar-ring"></div>
+        </div>
+
+        <div class="code-window">
+          <div class="code-header">
+            <span class="dot-red"></span>
+            <span class="dot-yellow"></span>
+            <span class="dot-green"></span>
+            <span class="code-title">developer.js</span>
+          </div>
+          <pre class="code-body"><code><span class="c-purple">const</span> <span class="c-blue">developer</span> = {
+  name: <span class="c-green">"Waseem TechX"</span>,
+  role: <span class="c-green">"Full Stack Dev"</span>,
+  passion: <span class="c-green">"Building Bots"</span>,
+  status: <span class="c-green">"Always Coding 🚀"</span>
+};</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="#about" class="scroll-down">
+    <i class="fa-solid fa-chevron-down"></i>
+  </a>
+</section>
+
+<!-- ═══════ ABOUT ═══════ -->
+<section class="section" id="about">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-tag">01 — About Me</span>
+      <h2 class="section-title">Get To <span class="gradient">Know Me</span></h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-text">
+        <p>
+          I'm <strong>Waseem</strong>, a passionate self-taught developer from
+          <strong>Pakistan 🇵🇰</strong>. I love building things that make people's
+          lives easier — from <em>WhatsApp bots</em> to full-stack web apps.
+        </p>
+        <p>
+          My journey started with curiosity and turned into an obsession with
+          clean code and beautiful design. I believe in <strong>progress over
+          perfection</strong> and constantly pushing boundaries.
+        </p>
+
+        <div class="about-highlights">
+          <div class="highlight">
+            <i class="fa-solid fa-code"></i>
+            <div>
+              <h4>Clean Code</h4>
+              <p>Readable, maintainable, scalable</p>
+            </div>
+          </div>
+          <div class="highlight">
+            <i class="fa-solid fa-bolt"></i>
+            <div>
+              <h4>Fast Delivery</h4>
+              <p>Ship quality on time</p>
+            </div>
+          </div>
+          <div class="highlight">
+            <i class="fa-solid fa-heart"></i>
+            <div>
+              <h4>Passion Driven</h4>
+              <p>Code with love</p>
+            </div>
+          </div>
+          <div class="highlight">
+            <i class="fa-solid fa-users"></i>
+            <div>
+              <h4>Community First</h4>
+              <p>Open source contributor</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-cards">
+        <div class="info-card">
+          <div class="info-icon"><i class="fa-solid fa-user"></i></div>
+          <div>
+            <span class="info-label">Name</span>
+            <span class="info-value">Waseem</span>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <div>
+            <span class="info-label">Location</span>
+            <span class="info-value">Pakistan 🇵🇰</span>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-icon"><i class="fa-solid fa-briefcase"></i></div>
+          <div>
+            <span class="info-label">Freelance</span>
+            <span class="info-value available">Available</span>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-icon"><i class="fa-solid fa-language"></i></div>
+          <div>
+            <span class="info-label">Languages</span>
+            <span class="info-value">Urdu, English</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ SKILLS ═══════ -->
+<section class="section" id="skills">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-tag">02 — Skills</span>
+      <h2 class="section-title">My <span class="gradient">Tech Arsenal</span></h2>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-card" data-skill="JavaScript">
+        <div class="skill-icon" style="--c:#f7df1e">
+          <i class="fa-brands fa-js"></i>
+        </div>
+        <h3>JavaScript</h3>
+        <p>Advanced</p>
+        <div class="skill-bar"><span style="--w:95%"></span></div>
+      </div>
+      <div class="skill-card" data-skill="Node.js">
+        <div class="skill-icon" style="--c:#339933">
+          <i class="fa-brands fa-node-js"></i>
+        </div>
+        <h3>Node.js</h3>
+        <p>Advanced</p>
+        <div class="skill-bar"><span style="--w:92%"></span></div>
+      </div>
+      <div class="skill-card" data-skill="HTML5">
+        <div class="skill-icon" style="--c:#e34f26">
+          <i class="fa-brands fa-html5"></i>
+        </div>
+        <h3>HTML5</h3>
+        <p>Expert</p>
+        <div class="skill-bar"><span style="--w:98%"></span></div>
+      </div>
+      <div class="skill-card" data-skill="CSS3">
+        <div class="skill-icon" style="--c:#1572b6">
+          <i class="fa-brands fa-css3-alt"></i>
+        </div>
+        <h3>CSS3</h3>
+        <p>Expert</p>
+        <div class="skill-bar"><span style="--w:96%"></span></div>
+      </div>
+      <div class="skill-card" data-skill="WhatsApp Bots">
+        <div class="skill-icon" style="--c:#25d366">
+          <i class="fa-brands fa-whatsapp"></i>
+        </div>
+        <h3>WA Bots</h3>
+        <p>Expert</p>
+        <div class="skill-bar"><span style="--w:99%"></span></div>
+      </div>
+      <div class="skill-card" data-skill="Git & GitHub">
+        <div class="skill-icon" style="--c:#ff5c7c">
+          <i class="fa-brands fa-git-alt"></i>
+        </div>
+        <h3>Git</h3>
+        <p>Advanced</p>
+        <div class="skill-bar"><span style="--w:90%"></span></div>
+      </div>
+      <div class="skill-card" data-skill="MongoDB">
+        <div class="skill-icon" style="--c:#47a248">
+          <i class="fa-solid fa-database"></i>
+        </div>
+        <h3>MongoDB</h3>
+        <p>Intermediate</p>
+        <div class="skill-bar"><span style="--w:80%"></span></div>
+      </div>
+      <div class="skill-card" data-skill="Baileys">
+        <div class="skill-icon" style="--c:#7a1fff">
+          <i class="fa-solid fa-robot"></i>
+        </div>
+        <h3>Baileys</h3>
+        <p>Expert</p>
+        <div class="skill-bar"><span style="--w:97%"></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ PROJECTS ═══════ -->
+<section class="section" id="projects">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-tag">03 — Portfolio</span>
+      <h2 class="section-title">Featured <span class="gradient">Projects</span></h2>
+    </div>
+
+    <div class="projects-grid">
+      <article class="project-card">
+        <div class="project-glow" style="--g:#ff1f4b"></div>
+        <div class="project-head">
+          <div class="project-icon" style="--c:#ff1f4b">
+            <i class="fa-solid fa-dragon"></i>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/LeGenDX96/LEGEND-MD" target="_blank" rel="noopener" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <h3>DEVIL-MD</h3>
+        <p>Multi-device WhatsApp bot with advanced features, session generator, and beautiful UI.</p>
+        <div class="project-tags">
+          <span>Node.js</span>
+          <span>Baileys</span>
+          <span>Bots</span>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-glow" style="--g:#7a1fff"></div>
+        <div class="project-head">
+          <div class="project-icon" style="--c:#7a1fff">
+            <i class="fa-solid fa-link"></i>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/LeGenDX96/DEVIL-MD-SESSION" target="_blank" rel="noopener" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <h3>DEVIL Session Generator</h3>
+        <p>Beautiful web app to generate WhatsApp bot session IDs via Pair Code or QR code.</p>
+        <div class="project-tags">
+          <span>Express</span>
+          <span>Baileys</span>
+          <span>QR</span>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-glow" style="--g:#22d47b"></div>
+        <div class="project-head">
+          <div class="project-icon" style="--c:#22d47b">
+            <i class="fa-solid fa-robot"></i>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/LeGenDX96" target="_blank" rel="noopener" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <h3>LEGEND-MD</h3>
+        <p>Next-gen secure WhatsApp bot with a huge command library, plugins, and multi-device support.</p>
+        <div class="project-tags">
+          <span>Node.js</span>
+          <span>Multi-Device</span>
+          <span>Plugins</span>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-glow" style="--g:#1f8bff"></div>
+        <div class="project-head">
+          <div class="project-icon" style="--c:#1f8bff">
+            <i class="fa-solid fa-globe"></i>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/LeGenDX96" target="_blank" rel="noopener" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <h3>LEGEND-SITE</h3>
+        <p>Session ID generator supporting all WhatsApp bots with modern UI and secure flow.</p>
+        <div class="project-tags">
+          <span>Web</span>
+          <span>Baileys</span>
+          <span>UI/UX</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ SERVICES ═══════ -->
+<section class="section" id="services">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-tag">04 — Services</span>
+      <h2 class="section-title">What I <span class="gradient">Offer</span></h2>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-num">01</div>
+        <div class="service-icon"><i class="fa-solid fa-robot"></i></div>
+        <h3>WhatsApp Bots</h3>
+        <p>Custom multi-device bots with plugins, commands, and powerful features tailored to your needs.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">02</div>
+        <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+        <h3>Web Development</h3>
+        <p>Modern, responsive websites and web apps built with the latest tech and beautiful design.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">03</div>
+        <div class="service-icon"><i class="fa-solid fa-server"></i></div>
+        <h3>API Development</h3>
+        <p>Robust REST APIs for your applications with authentication, database, and clean docs.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">04</div>
+        <div class="service-icon"><i class="fa-solid fa-palette"></i></div>
+        <h3>UI/UX Design</h3>
+        <p>Modern, clean, and conversion-focused UI designs that make your product stand out.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ CONTACT ═══════ -->
+<section class="section" id="contact">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-tag">05 — Contact</span>
+      <h2 class="section-title">Let's Build <span class="gradient">Together</span></h2>
+    </div>
+
+    <div class="contact-wrap">
+      <div class="contact-info">
+        <h3>Got a project in mind? 🚀</h3>
+        <p>Feel free to reach out — I'm always open to discussing new ideas, projects, or opportunities.</p>
+
+        <div class="contact-links">
+          <a href="https://wa.me/923447861706" target="_blank" rel="noopener" class="contact-item">
+            <div class="ci-icon" style="--c:#25d366"><i class="fa-brands fa-whatsapp"></i></div>
+            <div>
+              <span class="ci-label">WhatsApp</span>
+              <span class="ci-value">+92 344 786 1706</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/LeGenDX96" target="_blank" rel="noopener" class="contact-item">
+            <div class="ci-icon" style="--c:#ff5c7c"><i class="fa-brands fa-github"></i></div>
+            <div>
+              <span class="ci-label">GitHub</span>
+              <span class="ci-value">@LeGenDX96</span>
+            </div>
+          </a>
+
+          <a href="https://whatsapp.com/channel/0029Vb6FgVQEVccBswSu271t" target="_blank" rel="noopener" class="contact-item">
+            <div class="ci-icon" style="--c:#7a1fff"><i class="fa-solid fa-bullhorn"></i></div>
+            <div>
+              <span class="ci-label">Channel</span>
+              <span class="ci-value">DEVIL-MD Updates</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@email.com" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="Project Discussion" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell me about your project…" required></textarea>
+        </div>
+        <button type="submit" class="btn primary full">
+          <i class="fa-solid fa-paper-plane"></i> Send Message
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ FOOTER ═══════ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo-symbol">W</div>
+      <div>
+        <h4>Waseem TechX</h4>
+        <p>Unstoppable Developer · Progress iS mY PassioN</p>
+      </div>
+    </div>
+
+    <div class="footer-socials">
+      <a href="https://github.com/LeGenDX96" target="_blank" rel="noopener" aria-label="GitHub">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a href="https://wa.me/923447861706" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+      <a href="https://whatsapp.com/channel/0029Vb6FgVQEVccBswSu271t" target="_blank" rel="noopener" aria-label="Channel">
+        <i class="fa-solid fa-bullhorn"></i>
+      </a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© <span id="year"></span> <strong>Waseem TechX</strong> — Made with ❤️ in Pakistan 🇵🇰</p>
+    <a href="#home" class="back-top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </a>
+  </div>
+</footer>
+
+<!-- ═══════ TOAST ═══════ -->
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
